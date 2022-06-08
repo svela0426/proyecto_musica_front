@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row little-top-buffer">
+    <h1>{{generoDetail.nombre}}</h1>
+  </div>
+  <div class="row">
+    <h5>Stats:</h5>
+    <p>{{generoDetail.albumes.length}} album{{generoDetail.albumes.length > 1 ? 'es' : ''}}. <br/>
+    </p>
+  </div>
+  <div class="row">
+    <div *ngFor="let a of generoDetail.albumes" class="col mb-2">
+      <div class="card container hover" style="width: 18rem;" routerLink="/albums/{{a.id}}">
+        <img class="card-img-top image" src="{{a.imagen}}" alt="Card image cap">
+        <div class="card-body lyr2">
+          <h5 class="card-title lyr2">{{ a.titulo | slice: 0:20 }}{{a.titulo.length > 20 ? '...' : ''}}</h5>
+        </div>
+        <div class="overlay"></div>
+      </div>
+    </div>
+  </div>
+</div>
+

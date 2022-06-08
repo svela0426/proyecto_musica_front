@@ -1,0 +1,29 @@
+<div *ngIf="selected">
+  <app-cacion-detail [caciondetail]="selectedCacion"></app-cacion-detail>
+ </div>
+ <hr />
+
+ <div>
+  <input _ngcontent-sea-c23="" type="text" id="myInput" (keyup)="filtro()" placeholder="Filtra cancione por nombre...">
+</div>
+
+
+ <div class="grid-container">
+  <div *ngFor="let c of cacions">
+    <div class="container border">
+      <div class="text">{{c.titulo}}  </div>
+      <div class="overlay" (click)="onSelected(c)" >
+      <div class="txt">  </div>
+    </div>
+    </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+

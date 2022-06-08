@@ -1,0 +1,24 @@
+<div>
+  <input _ngcontent-sea-c23="" type="text" id="myInput" (keyup)="filtro()" placeholder="Filtra por nombre...">
+</div>
+<div class="container-fluid">
+  <div class="row" id="cont">
+    <div class="col mb-2" *ngFor="let capitulo of capitulos" id="{{capitulo.titulo}}">
+      <a class="nav-link active" routerLink="/podcasts/{{ capitulo.podcast.id }}/capitulos/{{ capitulo.id }}">
+          <div class="card p-2" style="width: 15rem; height: 33rem">
+            <img class="img-fluid" src='{{capitulo.imagen}}' alt="{{ capitulo.titulo }}"
+
+            (click)="onSelected(capitulo)" />
+              <div class="card-body">
+                <h5 class="card-title">{{ capitulo.titulo }}</h5>
+                  <p class="card-text">[{{ capitulo.podcast.titulo }}]</p>
+              </div>
+           </div>
+          </a>
+      </div>
+
+   </div>
+</div>
+<div *ngIf="selected">
+  <app-capitulo-detail [capituloDetail]="selectedCapitulo"></app-capitulo-detail>
+</div>

@@ -1,0 +1,18 @@
+<div>
+  <input _ngcontent-sea-c23="" type="text" id="myInput" (keyup)="filtro()" placeholder="Filtra por nombre...">
+</div>
+
+<div class="grid-container">
+
+  <div *ngFor="let c of creadores">
+    <div class="container">
+      <img src="{{ c.imagen }}" alt="{{ c.nombre }}" class="image" >
+      <div class="overlay" >
+      </div>
+      <div class="name">{{ c.nombre }}</div>
+    </div>
+  </div>
+</div>
+
+
+

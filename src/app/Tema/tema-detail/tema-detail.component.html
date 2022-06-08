@@ -1,0 +1,17 @@
+<div class="container-fluid">
+  <p class="h3 p-3">{{ temaDetail.nombre }}</p>
+  <div class="row">
+    <div class="col-2">
+      <div class="thumb">
+      </div>
+      <div class="col">
+        <dl>
+          <dt>Podcast</dt>
+          <dd class="caption" *ngFor="let podcast of temaDetail.podcasts">
+            {{ podcast.titulo }}
+           </dd>
+        </dl>
+      </div>
+    </div>
+   </div>
+

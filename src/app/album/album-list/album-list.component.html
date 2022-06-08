@@ -1,0 +1,36 @@
+<hr />
+
+ <h1>Albumes</h1>
+
+ <hr/>
+ <div class="input-group mb-3">
+  <input id="buscar_album" type="text" class="form-control" placeholder="Buscar Album" aria-label="Buscar Album" aria-describedby="basic-addon2" [(ngModel)]="albumSearch">
+  <div class="input-group-append">
+    <button class="btn btn-outline-secondary" type="button" (click)="buscarAlbum()">Buscar</button>
+  </div>
+</div>
+<div *ngIf="searchNotFound">
+  <p class="error-text">No se encontro el album.</p>
+ </div>
+
+<div class="container">
+  <div class="row">
+    <div *ngFor="let a of albums" class="col mb-2">
+      <div class="card container hover" style="width: 18rem;" routerLink="/albums/{{a.id}}">
+        <img class="card-img-top image" src="{{a.imagen}}" alt="Card image cap">
+        <div class="card-body lyr2">
+          <h5 class="card-title lyr2">{{ a.titulo | slice: 0:20 }}{{a.titulo.length > 20 ? '...' : ''}}</h5>
+          <p class="card-text lyr2">{{this.generateArtistsText(a)}}</p>
+        </div>
+        <div class="overlay"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<hr/>
+
+
+
+
+
+

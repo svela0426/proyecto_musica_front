@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="row little-top-buffer">
+    <div class="col">
+      <img class="albumCover" src="{{albumDetail.imagen}}" alt="{{albumDetail.titulo}}">
+    </div>
+    <div class="col-9">
+      <div class="container middle-container">
+        <h1>{{albumDetail.titulo}}</h1>
+        <h5>{{this.generateArtistsText(albumDetail)}}</h5>
+      </div>
+    </div>
+  </div>
+  <div class="row little-top-buffer">
+    <div class="col-8">
+      <h6>Canciones</h6>
+      <div class="container">
+        <div *ngFor="let song of albumDetail.canciones">
+          <div class="row song-row">
+            <div class="col-10">
+              <div class="song-title">
+                {{song.titulo}}
+              </div>
+            </div>
+            <div class="col song-duration">
+              {{this.generateSongDurationText(song)}}
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="col">
+      <h6>Generos</h6>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="card genero-card genero-body" routerLink="/generos/{{albumDetail.generos[0].id}}">
+              <div class="genero-body">
+                <img class="genero-img" src="{{albumDetail.imagen}}">
+                <h5 class="overlay">{{ albumDetail.generos[0].nombre }}</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

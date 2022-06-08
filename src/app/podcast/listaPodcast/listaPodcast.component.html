@@ -1,0 +1,30 @@
+
+  <div>
+    <input _ngcontent-sea-c23="" type="text" id="myInput" (keyup)="filtro()" placeholder="Filtra por nombre...">
+  </div>
+
+  <div  id="cont"class="row">
+  <div class="col mb-2" *ngFor="let c of podcasts;let i = index" id="{{ c.titulo }}">
+
+    <div class="container" >
+      <a class="nav-link active" routerLink="/podcasts/{{ c.id }}">
+      <img src="{{ c.imagen }}" alt="{{ c.titulo }}" class="image" >
+      </a>
+      <div class="overlay" (click)="onSelected(c)">
+        <a class="nav-link active" routerLink="/podcasts/{{ c.id }}">
+        <div class="text">{{c.titulo}}</div>
+        </a>
+    </div>
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+

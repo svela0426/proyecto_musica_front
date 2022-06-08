@@ -1,0 +1,103 @@
+<head>
+
+  <!--Boxicons-->
+  <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+  <link
+  href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap"
+  rel="stylesheet"
+/>
+</head>
+
+<nav class="navbar">
+  <ul class="navbar-nav">
+    <li class="logo">
+      <a href="#" class="nav-link">
+        <span class="link-text logo-text">music</span>
+        <i class='bx bx-podcast' ></i>
+
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a href="#" class="nav-link">
+        <i class='bx bxs-music'></i>
+        <a class="nav-link active" routerLink="/cacions/list">canciones</a>
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a href="#" class="nav-link">
+        <i class='bx bxs-album' ></i>
+        <a
+            class="nav-link active"
+            aria-current="page"
+            routerLink="/albums/list"
+            >Albumes</a>
+
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a href="#" class="nav-link">
+        <i class='bx bxs-microphone' ></i>
+        <span class="link-text">Artistas</span>
+
+
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a  class="nav-link active" routerLink="/podcasts/list">
+        <i class='bx bx-podcast' ></i>
+        <a class="nav-link active" routerLink="/podcasts/list">Podcasts</a>
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a  class="nav-link active" routerLink="/capitulos/list">
+        <i class='bx bx-film' ></i>
+        <a class="nav-link active" routerLink="/capitulos/list">Capitulos</a>
+      </a>
+    </li>
+
+
+
+    <li class="nav-item" id="themeButton">
+      <a href="#" class="nav-link">
+        <i class='bx bx-user-circle' ></i>
+        <span class="link-text">Usuario</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+
+
+
+
+<!-- Main Router Outlet -->
+<div class="container-fluid" id="principal">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="main-space">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="page-footer">
+  <div class="footer-copyright text-center py-2">
+    Sample proyect -
+    <a routerLink="/principal/list" id="colorFooterText2"> Main page</a>
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+

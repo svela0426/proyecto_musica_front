@@ -1,0 +1,86 @@
+.albumCover{
+  height: 300px;
+  width: 300px;
+}
+
+.middle-container{
+  margin-top: 100px;
+}
+
+.little-top-buffer{
+  margin-top: 30px;
+}
+
+.song-row{
+  margin: 10 0 0 10;
+  background-color: rgb(246, 246, 246);
+  border-top-width: 1px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  border-bottom-width: 0px;
+  border-style: solid;
+  border-color: gray;
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+.song-title{
+  font-size:medium;
+  width: flex;
+}
+
+.song-duration{
+  font-size:medium;
+  text-align: right;
+}
+
+
+.name{
+  color: rgb(0, 0, 0);
+  font-size: 30px;
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  text-align: center;
+  font-family:'Monaco',sans-serif;
+}
+
+
+.genero-card{
+height: 5rem;
+width: 12rem;
+overflow: hidden;
+border-radius: 2rem;
+}
+
+.genero-img{
+height: 12rem !important;
+width: 12rem !important;
+margin-top: 0px !important;
+}
+
+.genero-body{
+margin: 0px 0px 0px 0px !important;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 12rem;
+  height: 5rem;
+  border-radius: 2rem;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #a19c9c9f;
+  text-align:center;
+  line-height: 5rem;
+}
+
+.card:hover .overlay {
+  opacity: 1;
+}
+
+
+
+

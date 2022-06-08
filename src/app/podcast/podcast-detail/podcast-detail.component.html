@@ -1,0 +1,32 @@
+<div class="container-fluid">
+  <p class="h3 p-3">{{ podcastDetail.titulo }}</p>
+  <div class="row">
+    <div class="col-2">
+      <div class="thumb">
+        <img
+          class="img-fluid"
+          src="{{ podcastDetail.imagen }}"
+          alt="{{ podcastDetail.titulo }}"
+        />
+      </div>
+    </div>
+    <div class="col">
+      <dl>
+
+        <dt>ID</dt>
+        <dd>{{ podcastDetail.id }}</dd>
+        <hr />
+        <dt>Precio</dt>
+        <dd>{{ podcastDetail.precio }}</dd>
+        <hr />
+        <dt class="bold">Capitulos</dt>
+        <dd class="caption"  *ngFor="let capitulo of podcastDetail.capitulos">
+          <a class="nav-link active" routerLink="/podcasts/{{ podcastDetail.id }}/capitulos/{{ capitulo.id }}">
+            {{ capitulo.titulo }}</a></dd>
+        <hr />
+        <dt class="bold">Description</dt>
+        <dd>{{ podcastDetail.descripcion }}</dd>
+      </dl>
+    </div>
+  </div>
+ </div>

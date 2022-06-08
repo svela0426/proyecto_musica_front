@@ -1,0 +1,68 @@
+
+.name{
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    text-align: center;
+    font-family:'Monaco',sans-serif;
+}
+
+.row-buffer{
+  margin-top: 10px;
+}
+
+.btn-formatter{
+  float: right;
+  margin-left: auto;
+  margin-right: 15%;
+  width: 100px;
+}
+
+.text-right{
+  text-align: end;
+  line-height: 30px;
+}
+
+.genero-card{
+  height: 10rem;
+  width: 20rem;
+  overflow: hidden;
+  border-radius: 3.25rem;
+}
+
+.genero-img{
+  height: 20rem !important;
+  width: 20rem !important;
+  margin-top: 0px !important;
+}
+
+.genero-body{
+  margin: 0px 0px 0px 0px !important;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 20rem;
+    height: 10rem;
+    border-radius: 3.25rem;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #a19c9c9f;
+    text-align:center;
+    line-height: 10rem;
+  }
+
+  .card:hover .overlay {
+    opacity: 1;
+  }
+
+  .error-text{
+    color: red;
+  }
+
+
+

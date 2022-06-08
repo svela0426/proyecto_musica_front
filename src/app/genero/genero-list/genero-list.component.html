@@ -1,0 +1,26 @@
+<hr />
+<h1 routerLink="/generos/list">Todos los Generos</h1>
+<div class="input-group mb-3">
+  <input id="buscar_genero" type="text" class="form-control" placeholder="Buscar Genero" aria-label="Buscar Genero" aria-describedby="basic-addon2" [(ngModel)]="generoSearch">
+  <div class="input-group-append">
+    <button class="btn btn-outline-secondary" type="button" (click)="buscarGenero()">Buscar</button>
+  </div>
+</div>
+<div *ngIf="searchNotFound">
+  <p class="error-text">No se encontro el genero.</p>
+ </div>
+<div class="container-fluid">
+  <div class="row row-buffer">
+    <div class="col mb-2" *ngFor="let genero of generos">
+          <div class="card genero-card genero-body" style="width: 20rem; height: 10rem;" routerLink="/generos/{{genero.id}}">
+            <div class="genero-body">
+              <img class="genero-img" src="{{genero.albumes[0].imagen}}">
+              <h5 class="overlay">{{ genero.nombre }}</h5>
+            </div>
+          </div>
+    </div>
+  </div>
+</div>
+
+
+

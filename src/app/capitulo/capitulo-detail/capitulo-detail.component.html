@@ -1,0 +1,38 @@
+<div class="container-fluid">
+  <p class="h3 p-3">{{ capituloDetail.titulo }}</p>
+  <div class="row">
+    <div class="col-2">
+      <div class="thumb">
+        <img
+          class="prin"
+          src="{{ capituloDetail.imagen }}"
+          alt="{{ capituloDetail.titulo }}"
+        />
+      </div>
+    </div>
+    <div class="col">
+      <dl>
+        <dt>Id</dt>
+        <dd>{{ capituloDetail.id }}</dd>
+        <dt>Duracion</dt>
+        <dd>{{ capituloDetail.duracion }}</dd>
+        <hr />
+        <dt>Fecha de publicacion</dt>
+        <dd>{{ capituloDetail.fechaPublicacion }}</dd>
+        <hr />
+        <dt class="bold">Podcast</dt>
+        <a class="nav-link active" routerLink="/podcasts/{{ capituloDetail.podcast.id }}">
+        <img
+          class="mmm"
+          src="{{ capituloDetail.podcast.imagen }}"
+          alt="{{ capituloDetail.podcast.titulo }}"
+        />
+
+        <dd class="caption">{{ capituloDetail.podcast.titulo}}</dd>
+      </a>
+        <hr />
+
+      </dl>
+    </div>
+  </div>
+ </div>
